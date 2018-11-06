@@ -3,7 +3,7 @@
 import UIKit
 
 var str = "Hello, playground"
-//i learn how to clone projects
+//i learn how to clone projectss
 //Initializers (swift 4)
 //=================
 //init() {}
@@ -64,9 +64,23 @@ struct Resolution {
     var width = 0
     var height = 0
 }
-//خلى بالك هنا وهو انى عملت 
+//خلى بالك هنا وهو انى عملت من غير init()بحيث عملت اسين قيمة لكل متغير باسمة
 let resobject = Resolution(width: 78,height: 788)
-
+print(resobject.width)
+//==
+struct Celsius1 {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+    init(_ celsius: Double) {
+        temperatureInCelsius = celsius
+    }
+}
+let bodyTemperature = Celsius1(37.0)
 //======================================================================================================
 //classes  (swift4)
 //==================
